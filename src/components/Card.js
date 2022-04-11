@@ -1,5 +1,7 @@
 import React from "react";
 import Button from "./Buttons";
+import { FcStart } from "react-icons/fc";
+import { GiStopSign } from "react-icons/gi";
 function Card({ title, body }) {
     return (
         <div className="card-container">
@@ -7,21 +9,28 @@ function Card({ title, body }) {
                 <div className="card-title">{title}</div>
                 <div className="card-body">{body}</div>
                 <Button children="success" styleClass="btn-success" />
-                <br />
-                <br />
+
                 <Button children="warning" styleClass="btn-warning" />
-                <br />
-                <br />
+
                 <Button children="info" styleClass="btn-info" />
-                <br />
-                <br />
+
                 <Button children="primary" styleClass="btn-primary" />
-                <br />
-                <br />
+
                 <Button children="secondary" styleClass="btn-secondary" />
-                <br />
-                <br />
+
                 <Button children="default" styleClass="btn-default" />
+
+                <Button
+                    startIcon={<FcStart />}
+                    children="mimi"
+                    styleClass="btn-default"
+                />
+                <Button
+                    children="mimi"
+                    endIcon={<GiStopSign />}
+                    styleClass="btn-default"
+                />
+
                 <br />
                 <br />
             </div>
