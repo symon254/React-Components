@@ -1,13 +1,15 @@
 import PropTypes from "prop-types";
-
-const Button = ({ children, onClick, styleClass }) => {
+const Button = ({ children, onClick, styleClass, startIcon, endIcon }) => {
     return (
-        <button onClick={onClick} className={`btn ${styleClass}`}>
-            {children}
-        </button>
+        <div>
+            <button onClick={onClick} className={`btn ${styleClass}`}>
+                {startIcon}
+                {children}
+                {endIcon}
+            </button>
+        </div>
     );
 };
-
 Button.defaultProps = {
     styleClass: "btn-primary",
 };
@@ -17,5 +19,4 @@ Button.propTypes = {
     color: PropTypes.string,
     onClick: PropTypes.func,
 };
-
 export default Button;
