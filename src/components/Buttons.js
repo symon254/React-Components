@@ -1,8 +1,27 @@
 import PropTypes from "prop-types";
-const Button = ({ children, onClick, styleClass, startIcon, endIcon }) => {
+const Button = ({
+    children,
+    onClick,
+    styleClass,
+    startIcon,
+    endIcon,
+    padding,
+    width,
+    paddingLeft,
+    paddingRight,
+}) => {
     return (
         <div>
-            <button onClick={onClick} className={`btn ${styleClass}`}>
+            <button
+                onClick={onClick}
+                className={`btn ${styleClass}`}
+                style={{
+                    padding: padding,
+                    width: width,
+                    paddingLeft: paddingLeft,
+                    paddingRight: paddingRight,
+                }}
+            >
                 {startIcon}
                 {children}
                 {endIcon}
