@@ -1,4 +1,3 @@
-import "./App.css";
 //import Button from "./components/Buttons";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Card from "./components/Card";
