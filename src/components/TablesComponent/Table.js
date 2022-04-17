@@ -2,9 +2,9 @@ import React from "react";
 import TableHead from "./TableHead";
 import TableRow from "./TableRow";
 
-const Table = ({ thData, tbData, className, size }) => {
+const Table = ({ thData, tbData, className, size, width }) => {
     return (
-        <table className={className} size={size}>
+        <table className={className} size={size} style={{ width: width }}>
             <thead>
                 <tr>
                     {thData.map((h) => {
