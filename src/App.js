@@ -10,9 +10,11 @@ function App(c) {
                 {" "}
                 <ButtonDisplay />
             </div>
+            <br />
             <div>
                 <InputDisplay />
             </div>
+            <br />
             <div>
                 {" "}
                 <TablesDisplay />
