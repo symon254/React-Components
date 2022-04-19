@@ -1,11 +1,22 @@
-//import Button from "./components/Buttons";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Card from "./components/Card";
+import ButtonDisplay from "./components/Buttons/ButtonDisplay";
+import InputDisplay from "./components/InputsComponent/InputDisplay";
+import TablesDisplay from "./components/TablesComponent/TablesDisplay";
 
 function App(c) {
     return (
         <div className="App">
-            <Card title="buttons" />
+            <div>
+                {" "}
+                <ButtonDisplay />
+            </div>
+            <div>
+                <InputDisplay />
+            </div>
+            <div>
+                {" "}
+                <TablesDisplay />
+            </div>
         </div>
     );
 }
