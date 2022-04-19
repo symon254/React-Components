@@ -1,9 +1,23 @@
-export const dataTest = [
+import Inputs from "./Inputs";
+import ChecksRadios from "./ChecksRadios";
+
+export const inputss = [
     {
-        values: <>get</>,
+        label: (
+            <>
+                <br /> <Inputs />
+                <br />
+            </>
+        ),
     },
     {
-        values: <>me</>,
+        label: (
+            <>
+                <ChecksRadios type="radio" label="radio" />
+                <ChecksRadios type="checkbox" label="checkbox" />
+                <ChecksRadios type="switch" label="switch" />
+            </>
+        ),
     },
 ];
 
