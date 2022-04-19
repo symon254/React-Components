@@ -1,4 +1,3 @@
-import PropTypes from "prop-types";
 import { Card, Nav } from "react-bootstrap";
 const Cards = ({
     content,
@@ -34,9 +33,6 @@ const Cards = ({
             </Card>
         </div>
     );
-};
-Cards.propTypes = {
-    content: PropTypes.object,
 };
 
 export default Cards;
