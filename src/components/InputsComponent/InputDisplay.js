@@ -9,6 +9,7 @@ function InputDisplay() {
             <div>
                 <Cards
                     // width="18rem"
+                    height={"625px"}
                     header="Inputs"
                     title="input fields"
                     content={<SelectInput actions={Names} width="18rem" />}
