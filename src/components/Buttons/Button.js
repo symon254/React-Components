@@ -1,11 +1,14 @@
+import React from "react";
 import { FcStart } from "react-icons/fc";
 import { GiStopSign } from "react-icons/gi";
 import Button from "./Buttons";
+import "./Button.css";
+
 export const buttons = [
     {
         label: (
             <>
-                <Button children="success" styleClass="btn-success" />
+                <Button children="success" styleClass=" btn-me btn-success " />
                 <br />
             </>
         ),
@@ -13,21 +16,7 @@ export const buttons = [
     {
         label: (
             <>
-                <Button children="warning" styleClass="btn-warning" /> <br />
-            </>
-        ),
-    },
-    {
-        label: (
-            <>
-                <Button children="info" styleClass="btn-info" /> <br />
-            </>
-        ),
-    },
-    {
-        label: (
-            <>
-                <Button children="primary" styleClass="btn-primary" />
+                <Button children="warning" styleClass="btn-me btn-warning" />{" "}
                 <br />
             </>
         ),
@@ -35,7 +24,14 @@ export const buttons = [
     {
         label: (
             <>
-                <Button children="secondary" styleClass="btn-secondary" />
+                <Button children="info" styleClass="btn-me btn-info" /> <br />
+            </>
+        ),
+    },
+    {
+        label: (
+            <>
+                <Button children="primary" styleClass="btn-me btn-primary" />
                 <br />
             </>
         ),
@@ -43,7 +39,18 @@ export const buttons = [
     {
         label: (
             <>
-                <Button children="default" styleClass="btn-default" />
+                <Button
+                    children="secondary"
+                    styleClass="btn-me btn-secondary"
+                />
+                <br />
+            </>
+        ),
+    },
+    {
+        label: (
+            <>
+                <Button children="default" styleClass="btn-me btn-default" />
                 <br />
             </>
         ),
@@ -54,7 +61,8 @@ export const buttons = [
                 <Button
                     startIcon={<FcStart />}
                     children="mimi"
-                    styleClass="btn-default"
+                    styleClass="btn-me btn-default"
+                    backgroundColor="lightgrey"
                 />{" "}
                 <br />
             </>
@@ -66,7 +74,8 @@ export const buttons = [
                 <Button
                     children="mimi"
                     endIcon={<GiStopSign />}
-                    styleClass="btn-default"
+                    styleClass="btn-me btn-default"
+                    backgroundColor="lightgrey"
                 />{" "}
                 <br />
             </>
