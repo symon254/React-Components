@@ -1,9 +1,13 @@
 import { Card, Nav } from "react-bootstrap";
+import React from "react";
+
 const Cards = ({
     content,
     width,
+    height,
     header,
     title,
+    defaultActiveKey,
     variantimg,
     src,
     className,
@@ -12,11 +16,16 @@ const Cards = ({
     nameTab,
     href,
     actions,
+    border,
 }) => {
     return (
         <div>
-            <Card style={{ width: width }} className={className}>
-                <Nav variant={variantnav}>
+            <Card
+                style={{ width: width, height: height }}
+                className={className}
+                border={border}
+            >
+                <Nav variant={variantnav} defaultActiveKey={defaultActiveKey}>
                     <Nav.Item>
                         <Nav.Link href={href}>{nameTab}</Nav.Link>
                     </Nav.Item>
