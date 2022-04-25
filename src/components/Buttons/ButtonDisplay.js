@@ -8,8 +8,7 @@ function ButtonDisplay() {
             <div>
                 <Cards
                     // width="18rem"
-                    variantnav="tab"
-                    nameTab="simon"
+
                     header="button"
                     title="buttons"
                     actions={buttons}

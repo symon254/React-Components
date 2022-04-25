@@ -1,5 +1,6 @@
 import Inputs from "./Inputs";
 import ChecksRadios from "./ChecksRadios";
+import React from "react";
 
 export const inputss = [
     {
