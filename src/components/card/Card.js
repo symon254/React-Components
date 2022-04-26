@@ -1,4 +1,5 @@
 import { Card, Nav } from "react-bootstrap";
+import PropTypes from "prop-types";
 import React from "react";
 
 const Cards = ({
@@ -17,6 +18,13 @@ const Cards = ({
     href,
     actions,
     border,
+    backgroundColorHeader,
+    borderHead,
+    borderBody,
+    borderBottomBody,
+    borderTitle,
+    marginLeftHead,
+    fontSizeHead,
 }) => {
     return (
         <div>
@@ -31,9 +39,29 @@ const Cards = ({
                     </Nav.Item>
                 </Nav>
                 <Card.Img variant={variantimg} src={src} alt={alt} />
-                <Card.Header>{header}</Card.Header>
-                <Card.Body>
-                    <Card.Title>{title}</Card.Title>
+                <Card.Header
+                    style={{
+                        backgroundColor: backgroundColorHeader,
+                        border: borderHead,
+                        marginLeft: marginLeftHead,
+                        fontSize: fontSizeHead,
+                    }}
+                >
+                    {header}
+                </Card.Header>
+                <Card.Body
+                    style={{
+                        border: borderBody,
+                        borderBottom: borderBottomBody,
+                    }}
+                >
+                    <Card.Title
+                        style={{
+                            border: borderTitle,
+                        }}
+                    >
+                        {title}
+                    </Card.Title>
                     {content}
                     {actions.map(({ label }) => (
                         <>{label}</>
@@ -43,5 +71,10 @@ const Cards = ({
         </div>
     );
 };
-
+Cards.defaultProps = {
+    backgroundColorHeader: "white",
+};
+Cards.propTypes = {
+    backgroundColorHeader: PropTypes.string,
+};
 export default Cards;
