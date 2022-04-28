@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import Button from "../components/Buttons/Buttons";
 import Table from "../components/TablesComponent/Table";
 import { tbData, thData } from "../components/TablesComponent/TableData";
 import Cards from "../components/card/Card";
 import Contents from "./Content";
+import Modals from "../components/Modal/Modal";
 
 const Home = () => {
     const table = [
@@ -23,6 +24,10 @@ const Home = () => {
             ),
         },
     ];
+
+    const [handleShowBlue, setHandleShowBlue] = useState(false);
+    const [handleShowRed, setHandleShowRed] = useState(false);
+
     return (
         <div>
             <div className="card ">
@@ -76,39 +81,50 @@ const Home = () => {
                             </a>
                         </li>
                     </ul>
+                    <Button
+                        float="right"
+                        marginTop="-37px"
+                        marginLeft="20px"
+                        children="red"
+                        styleClass="btn-danger"
+                        width={"100px"}
+                        onClick={() => setHandleShowRed(true)}
+                    />
+                    <Button
+                        float="right"
+                        marginTop="-37px"
+                        children="blue"
+                        width={"100px"}
+                        onClick={() => setHandleShowBlue(true)}
+                    />
                 </div>
                 <div className="card-body">
-                    <br />
-                    <br />
-                    <h3 className="card-title" style={{ textAlign: "center" }}>
-                        Sample Example
-                    </h3>
-                    <div style={{ width: "700px", marginLeft: "450px" }}>
-                        <h6 style={{ textAlign: "center" }}>
-                            Sample Example Sample Example Sample Example Sample
-                            Example Sample Example Sample Example Sample Example
-                            Sample Example Sample Example Sample Example Sample
-                            Example Sample Example Sample Example Sample Example
-                            Sample Example Sample Example Sample Example Sample
-                            Example Sample Example Sample Example Sample Example
-                            Sample Example Sample Example Sample Example Sample
-                            Example Sample Example Sample Example Sample Example
-                            Sample Example Sample Example Sample Example Sample
-                            Example Sample Example Sample Example Sample Example
-                            Sample Example Sample Example Sample Example Sample
-                            Example Sample Example Sample Example{" "}
-                        </h6>
-                    </div>
                     <br />
                     <br />
                     <div>
                         <Contents />
                     </div>
                     <div>
-                        <Cards header="Tables" actions={table} />
+                        <Cards
+                            header="Tables"
+                            actions={table}
+                            onClick={() => setHandleShowBlue(true)}
+                        />
                     </div>
                 </div>
             </div>
+            <Modals
+                title="blue"
+                children="this is blue"
+                showModal={handleShowBlue}
+                onHideMode={() => setHandleShowBlue(false)}
+            />
+            <Modals
+                title="red"
+                children="this is red"
+                showModal={handleShowRed}
+                onHideMode={() => setHandleShowRed(false)}
+            />
         </div>
     );
 };
