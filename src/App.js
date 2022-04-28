@@ -106,9 +106,14 @@ function App() {
                     </div>
                     <div>
                         <Cards
-                            header="Tables"
+                            header="Table"
+                            fontSizeHead="20px"
                             actions={table}
-                            onClick={() => setHandleShowBlue(true)}
+                            backgroundColorHeader="lightblue"
+                            border="white"
+                            borderBody="white"
+                            borderHead="white"
+                            borderTitle="white"
                         />
                     </div>
                 </div>
