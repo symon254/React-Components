@@ -1,42 +1,55 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-// import ButtonDisplay from "./components/Buttons/ButtonDisplay";
-// import InputDisplay from "./components/InputsComponent/InputDisplay";
-// import TablesDisplay from "./components/TablesComponent/TablesDisplay";
-//import GridDisplay from "./components/ztestComponets/Gridsdisp";
-import Display from "./components/Display";
-import React from "react";
 import Button from "./components/Buttons/Buttons";
+import React, { useState } from "react";
+import Table from "./components/TablesComponent/Table";
+import { tbData, thData } from "./components/TablesComponent/TableData";
+import Cards from "./components/card/Card";
+import Contents from "./Pages/Content";
+import Modals from "./components/Modal/Modal";
+function App() {
+    const table = [
+        {
+            label: (
+                <>
+                    <Table
+                        margin="40px"
+                        thData={thData}
+                        tbData={tbData}
+                        className="table "
+                        size="small"
+                        width="1420px"
+                    />
+                    <br />
+                </>
+            ),
+        },
+    ];
 
-function App(c) {
+    const [handleShowBlue, setHandleShowBlue] = useState(false);
+    const [handleShowRed, setHandleShowRed] = useState(false);
+
     return (
         <div className="App">
-            {/* <div>
-                {" "}
-                <ButtonDisplay />
-            </div>
-            <br />
-            <div>
-                <InputDisplay />
-            </div>
-            <br />
-            <div>
-                {" "}
-                <TablesDisplay />
-            </div> */}
-            {/* <div>
-                {" "}
-                <GridDisplay />
-            </div> */}
-
             <div className="card ">
-                <div className="card-header">
+                <div
+                    className="card-header"
+                    style={{ backgroundColor: "white", boarderColor: "white" }}
+                >
                     <ul className="nav nav-tabs card-header-tabs">
-                        <li className="nav-item">
+                        <li className="nav-item" style={{ marginLeft: "50px" }}>
                             <a class="navbar-brand" href="#">
-                                React-Components
+                                Home-Page
                             </a>
                         </li>
-                        <li className="nav-item">
+                        <li
+                            className="nav-item"
+                            style={{
+                                textAlign: "center",
+                                marginLeft: "520px",
+                                paddingRight: "30px",
+                                paddingLeft: "30px",
+                            }}
+                        >
                             <a
                                 className="nav-link active"
                                 aria-current="true"
@@ -45,107 +58,73 @@ function App(c) {
                                 Tab1
                             </a>
                         </li>
-                        <li className="nav-item">
+                        <li
+                            className="nav-item"
+                            style={{
+                                paddingRight: "30px",
+                                paddingLeft: "30px",
+                            }}
+                        >
                             <a className="nav-link" href="#">
                                 Tab2
                             </a>
                         </li>
-                        <li className="nav-item">
-                            <a className="nav-link ">Tab3</a>
-                        </li>
-                    </ul>
-
-                    <Button
-                        float="right"
-                        marginTop="-37px"
-                        children="red"
-                        className="primary"
-                        width={"100px"}
-                    />
-                    <Button
-                        float="right"
-                        marginTop="-37px"
-                        marginRight="5px"
-                        children="blue"
-                        className="primary"
-                        width={"100px"}
-                    />
-                    <ul
-                        className="nav "
-                        style={{
-                            float: "right",
-                            marginRight: "-100px",
-                            marginTop: "-20px",
-                            marginBottom: "2px",
-                            paddingTop: "20px",
-                        }}
-                    >
                         <li
-                            class="nav-item dropdown"
+                            className="nav-item"
                             style={{
-                                float: "right",
-                                marginRight: "100px",
-                                marginTop: "-37px",
-                                marginBottom: "-20px",
+                                paddingRight: "30px",
+                                paddingLeft: "30px",
                             }}
                         >
-                            <a
-                                class="nav-link dropdown-toggle"
-                                href="#"
-                                id="navbarDropdown"
-                                role="button"
-                                data-bs-toggle="dropdown"
-                                aria-expanded="false"
-                            >
-                                Dropdown
+                            <a className="nav-link " href="#">
+                                Tab3
                             </a>
-                            <ul
-                                class="dropdown-menu"
-                                aria-labelledby="navbarDropdown"
-                            >
-                                <li>
-                                    <a class="dropdown-item" href="#">
-                                        Action
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="#">
-                                        Another action
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="#">
-                                        Something else here
-                                    </a>
-                                </li>
-                            </ul>
                         </li>
                     </ul>
+                    <Button
+                        float="right"
+                        marginTop="-37px"
+                        marginLeft="20px"
+                        children="red"
+                        styleClass="btn-danger"
+                        width={"100px"}
+                        onClick={() => setHandleShowRed(true)}
+                    />
+                    <Button
+                        float="right"
+                        marginTop="-37px"
+                        children="blue"
+                        width={"100px"}
+                        onClick={() => setHandleShowBlue(true)}
+                    />
                 </div>
                 <div className="card-body">
-                    <h5
-                        className="card-header"
-                        style={{
-                            float: "left",
-                            width: "100%",
-                            textAlign: "left",
-                        }}
-                    >
-                        My Components
-                    </h5>
                     <br />
                     <br />
-                    <h5
-                        className="card-title"
-                        style={{ textAlign: "left", marginLeft: "100px" }}
-                    >
-                        {" "}
-                        Components
-                    </h5>
-                    <br />
-                    <Display />
+                    <div>
+                        <Contents />
+                    </div>
+                    <div>
+                        <Cards
+                            header="Tables"
+                            actions={table}
+                            onClick={() => setHandleShowBlue(true)}
+                        />
+                    </div>
                 </div>
             </div>
+            <Modals
+                title="blue"
+                children="this is blue"
+                showModal={handleShowBlue}
+                onHideMode={() => setHandleShowBlue(false)}
+            />
+            <Modals
+                title="red"
+                children="this is red"
+                showModal={handleShowRed}
+                onHideMode={() => setHandleShowRed(false)}
+            />
         </div>
     );
 }
