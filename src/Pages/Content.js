@@ -1,8 +1,19 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import { FcStart } from "react-icons/fc";
+import { FcDocument } from "react-icons/fc";
+import { BiText } from "react-icons/bi";
+import { RiAdvertisementLine } from "react-icons/ri";
+import { BsImage, BsMusicNoteBeamed, BsPlayCircle } from "react-icons/bs";
 import Cards from "../components/card/Card";
-import { DataSet1 } from "../Data/Data";
+import {
+    Images,
+    Headings,
+    Videos,
+    Audios,
+    Addverts,
+    Documents,
+    Texts,
+} from "../Data/Data";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const Contents = () => {
@@ -12,16 +23,17 @@ const Contents = () => {
                 <Col>
                     <div
                         style={{
-                            height: "300px",
-                            width: "900px",
-                            marginLeft: "400px",
+                            height: "400px",
+                            width: "600px",
+                            marginLeft: "300px",
                         }}
                     >
                         <Cards
                             header=" Sample example"
+                            marginLeftHead="130px"
                             backgroundColorHeader="white"
                             fontSizeHead="40px"
-                            actions={DataSet1}
+                            actions={Headings}
                             border="white"
                             borderBody="white"
                             borderHead="white"
@@ -34,7 +46,9 @@ const Contents = () => {
                 <Col>
                     <div>
                         <div>
-                            <FcStart style={{ fontSize: "60px" }} />
+                            <BsImage
+                                style={{ fontSize: "60px", color: "blue" }}
+                            />
                         </div>
                         <div
                             style={{
@@ -46,7 +60,7 @@ const Contents = () => {
                                 header=" Images"
                                 backgroundColorHeader="white"
                                 fontSizeHead="40px"
-                                actions={DataSet1}
+                                actions={Images}
                                 border="white"
                                 borderBody="white"
                                 borderHead="white"
@@ -58,36 +72,10 @@ const Contents = () => {
                 <Col>
                     <div>
                         <div>
-                            <FcStart style={{ fontSize: "60px" }} />
-                        </div>
-                        <div
-                            style={{
-                                marginTop: "-90px",
-                                marginLeft: "70px",
-                            }}
-                        >
-                            <Cards
-                                header=" Images"
-                                backgroundColorHeader="white"
-                                fontSizeHead="40px"
-                                actions={DataSet1}
-                                border="white"
-                                borderBody="white"
-                                borderHead="white"
-                                borderTitle="white"
+                            <BsMusicNoteBeamed
+                                style={{ fontSize: "60px", color: "blue" }}
                             />
                         </div>
-                    </div>
-                </Col>
-            </Row>
-            <br />
-            <br />
-            <Row>
-                <Col>
-                    <div>
-                        <div>
-                            <FcStart style={{ fontSize: "60px" }} />
-                        </div>
                         <div
                             style={{
                                 marginTop: "-90px",
@@ -95,34 +83,10 @@ const Contents = () => {
                             }}
                         >
                             <Cards
-                                header=" Images"
+                                header=" Audio"
                                 backgroundColorHeader="white"
                                 fontSizeHead="40px"
-                                actions={DataSet1}
-                                border="white"
-                                borderBody="white"
-                                borderHead="white"
-                                borderTitle="white"
-                            />
-                        </div>
-                    </div>
-                </Col>
-                <Col>
-                    <div>
-                        <div>
-                            <FcStart style={{ fontSize: "60px" }} />
-                        </div>
-                        <div
-                            style={{
-                                marginTop: "-90px",
-                                marginLeft: "70px",
-                            }}
-                        >
-                            <Cards
-                                header=" Images"
-                                backgroundColorHeader="white"
-                                fontSizeHead="40px"
-                                actions={DataSet1}
+                                actions={Audios}
                                 border="white"
                                 borderBody="white"
                                 borderHead="white"
@@ -138,7 +102,9 @@ const Contents = () => {
                 <Col>
                     <div>
                         <div>
-                            <FcStart style={{ fontSize: "60px" }} />
+                            <BsPlayCircle
+                                style={{ fontSize: "60px", color: "blue" }}
+                            />
                         </div>
                         <div
                             style={{
@@ -147,10 +113,10 @@ const Contents = () => {
                             }}
                         >
                             <Cards
-                                header=" Images"
+                                header=" Video"
                                 backgroundColorHeader="white"
                                 fontSizeHead="40px"
-                                actions={DataSet1}
+                                actions={Videos}
                                 border="white"
                                 borderBody="white"
                                 borderHead="white"
@@ -162,7 +128,9 @@ const Contents = () => {
                 <Col>
                     <div>
                         <div>
-                            <FcStart style={{ fontSize: "60px" }} />
+                            <RiAdvertisementLine
+                                style={{ fontSize: "60px", color: "blue" }}
+                            />
                         </div>
                         <div
                             style={{
@@ -171,10 +139,66 @@ const Contents = () => {
                             }}
                         >
                             <Cards
-                                header=" Images"
+                                header=" Ad Formats"
                                 backgroundColorHeader="white"
                                 fontSizeHead="40px"
-                                actions={DataSet1}
+                                actions={Addverts}
+                                border="white"
+                                borderBody="white"
+                                borderHead="white"
+                                borderTitle="white"
+                            />
+                        </div>
+                    </div>
+                </Col>
+            </Row>
+            <br />
+            <br />
+            <Row>
+                <Col>
+                    <div>
+                        <div>
+                            <FcDocument
+                                style={{ fontSize: "60px", color: "blue" }}
+                            />
+                        </div>
+                        <div
+                            style={{
+                                marginTop: "-90px",
+                                marginLeft: "70px",
+                            }}
+                        >
+                            <Cards
+                                header=" Documents"
+                                backgroundColorHeader="white"
+                                fontSizeHead="40px"
+                                actions={Documents}
+                                border="white"
+                                borderBody="white"
+                                borderHead="white"
+                                borderTitle="white"
+                            />
+                        </div>
+                    </div>
+                </Col>
+                <Col>
+                    <div>
+                        <div>
+                            <BiText
+                                style={{ fontSize: "60px", color: "blue" }}
+                            />
+                        </div>
+                        <div
+                            style={{
+                                marginTop: "-90px",
+                                marginLeft: "70px",
+                            }}
+                        >
+                            <Cards
+                                header=" Text"
+                                backgroundColorHeader="white"
+                                fontSizeHead="40px"
+                                actions={Texts}
                                 border="white"
                                 borderBody="white"
                                 borderHead="white"
