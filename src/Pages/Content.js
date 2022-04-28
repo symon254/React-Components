@@ -10,6 +10,28 @@ const Contents = () => {
         <Container>
             <Row>
                 <Col>
+                    <div
+                        style={{
+                            height: "300px",
+                            width: "900px",
+                            marginLeft: "400px",
+                        }}
+                    >
+                        <Cards
+                            header=" Sample example"
+                            backgroundColorHeader="white"
+                            fontSizeHead="40px"
+                            actions={DataSet1}
+                            border="white"
+                            borderBody="white"
+                            borderHead="white"
+                            borderTitle="white"
+                        />
+                    </div>
+                </Col>
+            </Row>
+            <Row>
+                <Col>
                     <div>
                         <div>
                             <FcStart style={{ fontSize: "60px" }} />
