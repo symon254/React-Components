@@ -25,6 +25,7 @@ const Cards = ({
     borderTitle,
     marginLeftHead,
     fontSizeHead,
+    marginTophead,
 }) => {
     return (
         <div>
@@ -44,6 +45,7 @@ const Cards = ({
                         backgroundColor: backgroundColorHeader,
                         border: borderHead,
                         marginLeft: marginLeftHead,
+                        marginTop: marginTophead,
                         fontSize: fontSizeHead,
                     }}
                 >
