@@ -24,6 +24,22 @@ export const DataSet1 = [
 ];
 export const DataSet2 = [
     {
-        label: <></>,
+        label: (
+            <>
+                <h6 style={{ textAlign: "center" }}>
+                    Sample Example Sample Example Sample Example Sample Example
+                    Sample Example Sample Example Sample Example Sample Example
+                    Sample Example Sample Example Sample Example Sample Example
+                    Sample Example Sample Example Sample Example Sample Example
+                    Sample Example Sample Example Sample Example Sample Example
+                    Sample Example Sample Example Sample Example Sample Example
+                    Sample Example Sample Example Sample Example Sample Example
+                    Sample Example Sample Example Sample Example Sample Example
+                    Sample Example Sample Example Sample Example Sample Example
+                    Sample Example Sample Example Sample Example Sample Example
+                    Sample Example{" "}
+                </h6>
+            </>
+        ),
     },
 ];
