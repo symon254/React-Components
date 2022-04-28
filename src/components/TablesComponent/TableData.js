@@ -1,51 +1,18 @@
-import React, { useState } from "react";
-import Button from "../Buttons/Buttons";
-import { FaEdit } from "react-icons/fa";
-import { MdDelete } from "react-icons/md";
-import Modals from "../Modal/Modal";
+import React from "react";
+import { Delete, Edit } from "../../Data/ButtonsModal";
 
 export const thData = ["name", "email", "date", "Actions"];
 export const tbData = [
     {
         id: "1",
-        items: [
-            "simon",
-            "simon@gmail.com",
-            "01/01/2022",
-            <Button startIcon={<FaEdit />} styleClass="btn-success" />,
-            <Button
-                startIcon={<MdDelete />}
-                styleClass="btn-danger"
-                marginLeft="-90px"
-            />,
-        ],
+        items: ["simon", "simon@gmail.com", "01/01/2022", <Edit />, <Delete />],
     },
     {
         id: "2",
-        items: [
-            "effie",
-            "effie@gmail.com",
-            "01/01/2022",
-            <Button startIcon={<FaEdit />} styleClass="btn-success" />,
-            <Button
-                startIcon={<MdDelete />}
-                styleClass="btn-danger"
-                marginLeft="-90px"
-            />,
-        ],
+        items: ["effie", "effie@gmail.com", "01/01/2022", <Edit />, <Delete />],
     },
     {
         id: "3",
-        items: [
-            "sydo",
-            "sydo@gmail.com",
-            "01/01/2022",
-            <Button startIcon={<FaEdit />} styleClass="btn-success" />,
-            <Button
-                startIcon={<MdDelete />}
-                styleClass="btn-danger"
-                marginLeft="-90px"
-            />,
-        ],
+        items: ["sydo", "sydo@gmail.com", "01/01/2022", <Edit />, <Delete />],
     },
 ];
