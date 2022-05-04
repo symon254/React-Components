@@ -8,6 +8,7 @@ function AlertDisplay() {
             label: (
                 <>
                     <Alert
+                        width="300px"
                         className="alert alert-primary"
                         role="alert"
                         children="primary"
@@ -59,49 +60,53 @@ function AlertDisplay() {
                 </>
             ),
         },
-        {
-            label: (
-                <>
-                    <Alert
-                        className="alert alert-info"
-                        role="alert"
-                        children="info"
-                    />
-                </>
-            ),
-        },
-        {
-            label: (
-                <>
-                    <Alert
-                        className="alert alert-light"
-                        role="alert"
-                        children="light"
-                    />
-                </>
-            ),
-        },
-        {
-            label: (
-                <>
-                    <Alert
-                        className="alert alert-dark"
-                        role="alert"
-                        children="dark"
-                    />
-                </>
-            ),
-        },
+        // {
+        //     label: (
+        //         <>
+        //             <Alert
+        //                 className="alert alert-info"
+        //                 role="alert"
+        //                 children="info"
+        //             />
+        //         </>
+        //     ),
+        // },
+        // {
+        //     label: (
+        //         <>
+        //             <Alert
+        //                 className="alert alert-light"
+        //                 role="alert"
+        //                 children="light"
+        //             />
+        //         </>
+        //     ),
+        // },
+        // {
+        //     label: (
+        //         <>
+        //             <Alert
+        //                 className="alert alert-dark"
+        //                 role="alert"
+        //                 children="dark"
+        //             />
+        //         </>
+        //     ),
+        // },
     ];
     return (
         <div>
             <div>
                 <Cards
                     // width="18rem"
-                    height="1035px"
+                    // height="1035px"
                     header="Alert"
-                    title="Alerts"
                     actions={Alerts}
+                    border="white"
+                    borderBody="white"
+                    borderHead="white"
+                    borderTitle="white"
+                    // borderRadius="10px"
                 />
             </div>
         </div>

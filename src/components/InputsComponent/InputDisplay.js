@@ -9,11 +9,15 @@ function InputDisplay() {
             <div>
                 <Cards
                     // width="18rem"
-                    height={"625px"}
-                    header="Inputs"
-                    title="input fields"
+                    height={"100%"}
+                    header="input fields"
                     content={<SelectInput actions={Names} width="18rem" />}
                     actions={inputss}
+                    border="white"
+                    borderBody="white"
+                    borderHead="white"
+                    borderTitle="white"
+                    marginBottomCard="-30px"
                 />
 
                 <br />

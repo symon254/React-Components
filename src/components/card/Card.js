@@ -26,11 +26,24 @@ const Cards = ({
     marginLeftHead,
     fontSizeHead,
     marginTophead,
+    borderRadius,
+    marginTopCard,
+    marginLeftCard,
+    marginRightCard,
+    marginBottomCard,
 }) => {
     return (
         <div>
             <Card
-                style={{ width: width, height: height }}
+                style={{
+                    width: width,
+                    height: height,
+                    borderRadius: borderRadius,
+                    marginTop: marginTopCard,
+                    marginLeft: marginLeftCard,
+                    marginRight: marginRightCard,
+                    marginBottom: marginBottomCard,
+                }}
                 className={className}
                 border={border}
             >

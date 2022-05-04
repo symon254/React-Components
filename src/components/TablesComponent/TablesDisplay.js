@@ -27,8 +27,11 @@ function TablesDisplay() {
                 <Cards
                     // width="18rem"
                     header="Tables"
-                    title="table"
                     actions={table}
+                    border="white"
+                    borderBody="white"
+                    borderHead="white"
+                    borderTitle="white"
                 />
             </div>
         </div>

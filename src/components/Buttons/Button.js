@@ -24,6 +24,14 @@ export const buttons = [
     {
         label: (
             <>
+                <Button children="danger" styleClass="btn-me btn-danger" />{" "}
+                <br />
+            </>
+        ),
+    },
+    {
+        label: (
+            <>
                 <Button children="info" styleClass="btn-me btn-info" /> <br />
             </>
         ),
@@ -47,38 +55,38 @@ export const buttons = [
             </>
         ),
     },
-    {
-        label: (
-            <>
-                <Button children="default" styleClass="btn-me btn-default" />
-                <br />
-            </>
-        ),
-    },
-    {
-        label: (
-            <>
-                <Button
-                    startIcon={<FcStart />}
-                    children="mimi"
-                    styleClass="btn-me btn-default"
-                    backgroundColor="lightgrey"
-                />{" "}
-                <br />
-            </>
-        ),
-    },
-    {
-        label: (
-            <>
-                <Button
-                    children="mimi"
-                    endIcon={<GiStopSign />}
-                    styleClass="btn-me btn-default"
-                    backgroundColor="lightgrey"
-                />{" "}
-                <br />
-            </>
-        ),
-    },
+    // {
+    //     label: (
+    //         <>
+    //             <Button children="default" styleClass="btn-me btn-default" />
+    //             <br />
+    //         </>
+    //     ),
+    // },
+    // {
+    //     label: (
+    //         <>
+    //             <Button
+    //                 startIcon={<FcStart />}
+    //                 children="mimi"
+    //                 styleClass="btn-me btn-default"
+    //                 backgroundColor="lightgrey"
+    //             />{" "}
+    //             <br />
+    //         </>
+    //     ),
+    // },
+    // {
+    //     label: (
+    //         <>
+    //             <Button
+    //                 children="mimi"
+    //                 endIcon={<GiStopSign />}
+    //                 styleClass="btn-me btn-default"
+    //                 backgroundColor="lightgrey"
+    //             />{" "}
+    //             <br />
+    //         </>
+    //     ),
+    // },
 ];

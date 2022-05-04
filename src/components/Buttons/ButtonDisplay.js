@@ -10,8 +10,11 @@ function ButtonDisplay() {
                     // width="18rem"
 
                     header="button"
-                    title="buttons"
                     actions={buttons}
+                    border="white"
+                    borderBody="white"
+                    borderHead="white"
+                    borderTitle="white"
                 />
             </div>
         </div>
