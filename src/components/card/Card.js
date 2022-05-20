@@ -1,95 +1,35 @@
-import { Card, Nav } from "react-bootstrap";
-import PropTypes from "prop-types";
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
 
-const Cards = ({
-    content,
-    width,
-    height,
-    header,
-    title,
-    defaultActiveKey,
-    variantimg,
-    src,
-    className,
-    alt,
-    variantnav,
-    nameTab,
-    href,
-    actions,
-    border,
-    backgroundColorHeader,
-    borderHead,
-    borderBody,
-    borderBottomBody,
-    borderTitle,
-    marginLeftHead,
-    fontSizeHead,
-    marginTophead,
-    borderRadius,
-    marginTopCard,
-    marginLeftCard,
-    marginRightCard,
-    marginBottomCard,
-}) => {
+const Card = ({ header, title, description }) => {
     return (
-        <div>
-            <Card
-                style={{
-                    width: width,
-                    height: height,
-                    borderRadius: borderRadius,
-                    marginTop: marginTopCard,
-                    marginLeft: marginLeftCard,
-                    marginRight: marginRightCard,
-                    marginBottom: marginBottomCard,
-                }}
-                className={className}
-                border={border}
-            >
-                <Nav variant={variantnav} defaultActiveKey={defaultActiveKey}>
-                    <Nav.Item>
-                        <Nav.Link href={href}>{nameTab}</Nav.Link>
-                    </Nav.Item>
-                </Nav>
-                <Card.Img variant={variantimg} src={src} alt={alt} />
-                <Card.Header
-                    style={{
-                        backgroundColor: backgroundColorHeader,
-                        border: borderHead,
-                        marginLeft: marginLeftHead,
-                        marginTop: marginTophead,
-                        fontSize: fontSizeHead,
-                    }}
-                >
-                    {header}
-                </Card.Header>
-                <Card.Body
-                    style={{
-                        border: borderBody,
-                        borderBottom: borderBottomBody,
-                    }}
-                >
-                    <Card.Title
-                        style={{
-                            border: borderTitle,
-                        }}
-                    >
-                        {title}
-                    </Card.Title>
-                    {content}
-                    {actions.map(({ label }) => (
-                        <>{label}</>
-                    ))}
-                </Card.Body>
-            </Card>
+        // <div className="card rounded-5 pb-3 mb-4">
+        //   <h5 className="card-header">{header}</h5>
+        //   <div className="card-body">
+        //     <h5 className="card-title">{title}</h5>
+        //     <span className="card-text">{description}</span>
+        //   </div>
+        // </div>
+
+        <div className="card rounded-5 p-3 mb-2">
+            <div className="d-flex justify-content-between">
+                <div className="d-flex flex-row align-items-center">
+                    <div className="icon">
+                        <i className="bx bxl-dribbble" />
+                    </div>
+                    <div className="ms-2 c-details">
+                        <h4 className="mb-0">{header}</h4>
+                    </div>
+                </div>
+                <div className="badge">
+                    <span className="px-1">Components</span>
+                </div>
+            </div>
+            <div className="mt-4">
+                <h3 className="heading">{description}</h3>
+            </div>
         </div>
     );
 };
-Cards.defaultProps = {
-    backgroundColorHeader: "white",
-};
-Cards.propTypes = {
-    backgroundColorHeader: PropTypes.string,
-};
-export default Cards;
+
+export default Card;

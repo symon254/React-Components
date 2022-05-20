@@ -27,4 +27,6 @@ Inputs.propTypes = {
     placeholder: PropTypes.string,
     onChange: PropTypes.func,
 };
+
+
 export default Inputs;

@@ -351,13 +351,24 @@
 .dropdowns {
     color: white;
     margin-top: 15px;
+    display: flex;
+    
 }
 .comp-heading {
     border: green 5px;
     background: rgba(230, 217, 217, 0.925);
     transition: transform 0.5s, box-shadow 1s;
 }
-
+.comp-heading-test {
+    border: green 5px;
+    background: rgba(230, 217, 217, 0.925);
+    transition: transform 0.5s, box-shadow 1s;
+}
+.comp-heading-test:hover {
+    transform: scale(1.02) perspective(0px);
+    box-shadow: 0 10px 10px rgba(70, 60, 60, 0.925);
+    animation: pulse-animation 11s infinite;
+}
 .comp-heading:hover {
     transform: scale(1.02) perspective(0px);
     box-shadow: 0 10px 10px rgba(70, 60, 60, 0.925);

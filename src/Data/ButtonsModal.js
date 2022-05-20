@@ -23,16 +23,38 @@ export const Edit = () => {
         </div>
     );
 };
+// export const Delete = () => {
+//     const [handleDelete, setHandleDelete] = useState(tbData);
+
+//     const removes = (id) => {
+//         console.log(tbData);
+
+//         let tb = tbData.filter((tbd) => {
+//             return tbd.id !== id;
+//         });
+//         setHandleDelete({
+//             tb,
+//         });
+//     };
+//     return (
+//         <div>
+//             <button onClick={() => removes()} className="btn btn-danger">
+//                 <MdDelete />
+//             </button>
+//         </div>
+//     );
+// };
+
 export const Delete = () => {
     //const dataList = tbData;
     const [handleDelete, setHandleDelete] = useState(tbData);
     // const deletes = (id) => {
     //     setHandleDelete(handleDelete.filter((item) => item.id !== id));
     // };
-    const removes = () => {
-        const me = handleDelete.filter((item) => item.id !== tbData.id);
-        setHandleDelete(me);
-    };
+    // const removes = () => {
+    //     const me = handleDelete.filter((item) => item.id !== tbData.id);
+    //     setHandleDelete(me);
+    // };
     return (
         <div>
             <button

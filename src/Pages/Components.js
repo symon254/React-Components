@@ -76,7 +76,7 @@ const Components = () => {
                 </Row>
                 <Row>
                     <div>
-                        <Col className="comp-heading">
+                        <Col className="comp-heading-test">
                             <TablesDisplay />
                         </Col>
                     </div>

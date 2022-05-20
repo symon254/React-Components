@@ -1,12 +1,16 @@
-import React from "react";
-import ReactDOM from "react-dom";
+import React, { Suspense } from "react";
+import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
+//import { Table } from "./Components/Table/test";
+import "bootstrap/dist/js/bootstrap.bundle.min";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-ReactDOM.render(
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(
     <React.StrictMode>
-        <App />
-    </React.StrictMode>,
-    document.getElementById("root")
+        <Suspense fallback="Loading...">
+            <App />
+        </Suspense>
+    </React.StrictMode>
 );
