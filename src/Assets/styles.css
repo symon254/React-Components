@@ -1,5 +1,13 @@
 /** Buttons  **/
-
+.navbutton {
+    border-radius: 10px;
+    background-color: blue;
+    background: none;
+    border: none;
+}
+.navbutton:hover {
+    border-bottom: 6px solid blue;
+}
 /** Card  **/
 .card {
     border: solid;
