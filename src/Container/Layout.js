@@ -1,6 +1,6 @@
 import React, { Suspense } from "react";
 import { Route, Routes, red } from "react-router-dom";
-import { Navbar } from "../Components/Navbar/Navbar";
+import { Navbar } from "../components/Navbar/Navbar";
 import screens from "../Routes";
 
 const layout = () => {
