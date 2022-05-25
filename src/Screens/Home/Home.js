@@ -1,6 +1,6 @@
 import React from "react";
-import Card from "../../Components/Card/Card";
-import { Button } from "../../Components/Button/Button";
+import Card from "../../components/card/Card";
+import { Button } from "../../components/Button/Button";
 
 const getData = () => {
   const data = [

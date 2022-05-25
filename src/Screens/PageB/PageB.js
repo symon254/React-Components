@@ -1,15 +1,15 @@
 import React from "react";
-import Card from "../../Components/Card/Card";
-import { Button } from "../../Components/Button/Button";
+import Card from "../../components/card/Card";
+import { Button } from "../../components/Button/Button";
 import {
     Checkbox,
     RadioButton,
     Toggle,
     Select,
     Input,
-} from "../../Components/Input/Input";
-import { Table } from "../../Components/Table/test";
-import { Alert } from "../../Components/Alert/Alert";
+} from "../../components/Input/Input";
+import { Table } from "../../components/Table/test";
+import { Alert } from "../../components/Alert/Alert";
 
 import { BsInfoCircleFill, BsExclamationTriangleFill } from "react-icons/bs";
 import { AiFillCheckCircle } from "react-icons/ai";
