@@ -1,5 +1,5 @@
 import React from "react";
-import Cards from "../../Components/Card/Cards";
+import Cards from "../../components/card/Cards";
 
 const PageD = () => {
     return (
