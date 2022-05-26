@@ -1,9 +1,9 @@
 import React from "react";
-import Cards from "../../components/card/Cards";
+import Cards from "../../components/Card/Cards";
 
 const PageD = () => {
     return (
-        <div>
+        <div style={{ marginLeft: "100px" }}>
             <Cards />
         </div>
     );

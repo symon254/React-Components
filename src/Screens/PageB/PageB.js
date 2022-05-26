@@ -1,5 +1,5 @@
 import React from "react";
-import Card from "../../components/card/Card";
+import Card from "../../components/Card/Card";
 import { Button } from "../../components/Button/Button";
 import {
     Checkbox,
@@ -84,7 +84,7 @@ const PageB = () => {
 
     return (
         <>
-            <div className="content-wrapper  ">
+            <div className="content-wrapper " style={{ marginLeft: "100px" }}>
                 <div className="container"></div>
                 <div className="container">
                     <div className="row">
