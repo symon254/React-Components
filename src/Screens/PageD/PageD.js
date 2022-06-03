@@ -1,6 +1,7 @@
 import React from "react";
 import "../../Assets/styles.css";
-import { Bar } from "react-chartjs-2";
+import { Bar, Doughnut, Line, Pie } from "react-chartjs-2";
+//import { Chart as ChartJS } from "chart.js/auto";
 import { HiUserGroup } from "react-icons/hi";
 import { BsArrowUp } from "react-icons/bs";
 import { GiWhiteBook } from "react-icons/gi";
@@ -133,7 +134,7 @@ const PageD = () => {
                 </div>
             </div>
             <div className="row">
-                <div className="col-md-6">
+                <div className="barchart">
                     <Bar
                         data={{
                             labels: ["Term1", "Term2", "Term3"],
@@ -141,18 +142,76 @@ const PageD = () => {
                                 {
                                     label: "# fee payed",
                                     data: [1500, 2300, 4300],
+                                    backgroundColor: ["red", "blu", "green"],
                                 },
                             ],
                             backgroundColor: ["red", "blu", "green"],
                         }}
-                        height={100}
+                        height={200}
                         width={200}
                         options={{
-                            maintainAspectRatio: false,
+                            maintainAspectRatio: true,
                         }}
                     />
                 </div>
-                <div className="col-md-6"></div>
+            </div>
+            <div className="row">
+                <div className="col-md-6  ">
+                    <Pie
+                        data={{
+                            labels: ["Term1", "Term2", "Term3"],
+                            datasets: [
+                                {
+                                    label: "# fee payed",
+                                    data: [1500, 2300, 4300],
+                                    backgroundColor: ["red", "blu", "green"],
+                                },
+                            ],
+                            backgroundColor: ["red", "blu", "green"],
+                        }}
+                        options={{
+                            maintainAspectRatio: true,
+                        }}
+                    />
+                </div>
+                <div className="col-md-6">
+                    <Doughnut
+                        data={{
+                            labels: ["Term1", "Term2", "Term3"],
+                            datasets: [
+                                {
+                                    label: "# fee payed",
+                                    data: [1500, 2300, 4300],
+                                    backgroundColor: ["red", "blu", "green"],
+                                },
+                            ],
+                            backgroundColor: ["red", "blu", "green"],
+                        }}
+                        options={{
+                            maintainAspectRatio: true,
+                        }}
+                    />
+                </div>
+            </div>
+            <div className="row">
+                <Line
+                    data={{
+                        labels: ["Term1", "Term2", "Term3"],
+                        datasets: [
+                            {
+                                label: "# fee payed",
+                                data: [1500, 2300, 4300],
+                                backgroundColor: ["red", "blu", "green"],
+                            },
+                        ],
+                        backgroundColor: ["red", "blu", "green"],
+                    }}
+                    height={200}
+                    width={200}
+                    options={{
+                        maintainAspectRatio: true,
+                    }}
+                />
             </div>
         </div>
     );
