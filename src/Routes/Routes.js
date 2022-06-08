@@ -32,6 +32,12 @@ const routes = [
         icon: <AiTwotoneCompass />,
         cName: "item-tab",
     },
+    {
+        name: "Page E",
+        path: "/pageE",
+        icon: <AiTwotoneCompass />,
+        cName: "item-tab",
+    },
 ];
 
 export default routes;

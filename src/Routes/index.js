@@ -5,6 +5,7 @@ const PageA = lazy(() => import("../Screens/PageA/PageA"));
 const PageB = lazy(() => import("../Screens/PageB/PageB"));
 const PageC = lazy(() => import("../Screens/PageC/PageC"));
 const PageD = lazy(() => import("../Screens/PageD/PageD"));
+const PageE = lazy(() => import("../Screens/PageE/PageE"));
 
 const screens = [
     {
@@ -22,9 +23,14 @@ const screens = [
     {
         component: PageC,
         path: "/PageC",
-    },{
+    },
+    {
         component: PageD,
         path: "/PageD",
+    },
+    {
+        component: PageE,
+        path: "/PageE",
     },
 ];
 
