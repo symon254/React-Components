@@ -1,26 +1,21 @@
 import React from "react";
+import "../../Assets/styles.css";
 
-const Cards = ({ header, description, icon }) => {
+const Cards = ({ src, alt, title, des, price, Children }) => {
     return (
-        <>
-            <>
-                <div className="card">
-                    <div className="d-flex justify-content-between">
-                        <div className="d-flex flex-row align-items-center">
-                            <div className="icon">{icon}</div>
-                            <div className="header">{header}</div>
-                        </div>
-                        <div className="badge">
-                            <span className="px-1">Components</span>
-                        </div>
-                    </div>
-
-                    <div className="mt-4">
-                        <h3 className="heading">{description}</h3>
-                    </div>
+        <div className="wrapper">
+            <div className="cardss">
+                <div>
+                    <img className="cardss__img" src={src} alt={alt} />
                 </div>
-            </>
-        </>
+                <div className="cardss__body">
+                    <h2 className="cardss__title">{title}</h2>
+                    <p className="cardss__description">{des}</p>
+                    <h3 className="cardss__price">{price}</h3>
+                    <button className="cardss__btn">{Children}</button>
+                </div>
+            </div>
+        </div>
     );
 };
 
