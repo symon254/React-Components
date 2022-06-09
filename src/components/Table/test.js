@@ -1,5 +1,6 @@
 import React, { Fragment, useState } from "react";
 import { Button } from "../Button/Button";
+import { Input } from "../Input/Input";
 import { Modal } from "../Modal/Modal";
 import data from "../../Assets/Data/Data.json";
 import { nanoid } from "nanoid";
@@ -175,76 +176,68 @@ export const Table = ({
                     title={"add"}
                     id="staticBackdrop"
                     content={
-                        <>
-                            <form onSubmit={handleAddSubmit}>
-                                <input
-                                    type="text"
-                                    name="name"
-                                    required="required"
-                                    placeholder="enter name..."
-                                    onChange={handleAddChange}
-                                />
-                                <br />
-                                <input
-                                    type="email"
-                                    name="email"
-                                    required="required"
-                                    placeholder="enter email..."
-                                    onChange={handleAddChange}
-                                />
-                                <br />
-                                <input
-                                    type="date"
-                                    name="date"
-                                    placeholder="enter date..."
-                                    onChange={handleAddChange}
-                                />
-                                <br />
-                                <button type="submit">add</button>
-                            </form>
-                        </>
+                        <form onSubmit={handleAddSubmit}>
+                            <Input
+                                type="text"
+                                name="name"
+                                required="required"
+                                placeholder="enter name..."
+                                onChange={handleAddChange}
+                            />
+
+                            <Input
+                                type="email"
+                                name="email"
+                                required="required"
+                                placeholder="enter email..."
+                                onChange={handleAddChange}
+                            />
+
+                            <Input
+                                type="date"
+                                name="date"
+                                placeholder="enter date..."
+                                onChange={handleAddChange}
+                            />
+
+                            <button className="btn btn-primary" type="submit">
+                                add
+                            </button>
+                        </form>
                     }
                 />
                 <Modal
                     title={"edit"}
                     id="edit"
                     content={
-                        <>
-                            <form>
-                                <input
-                                    type="text"
-                                    name="name"
-                                    value={editFormData.name}
-                                    required="required"
-                                    placeholder="enter name..."
-                                    onChange={() => handleEditChange()}
-                                />
-                                <br />
-                                <input
-                                    type="email"
-                                    name="email"
-                                    value={editFormData.email}
-                                    required="required"
-                                    placeholder="enter email..."
-                                    onChange={handleEditChange}
-                                />
-                                <br />
-                                <input
-                                    type="text"
-                                    name="date"
-                                    value={editFormData.date}
-                                    placeholder="enter date..."
-                                    onChange={handleEditChange}
-                                />
-                                <br />
-                                <button
-                                    type="submit"
-                                    className="btn btn-success"
-                                >
-                                    save
-                                </button>
-                            </form>
-                        </>
+                        <form>
+                            <Input
+                                type="text"
+                                name="name"
+                                value={editFormData.name}
+                                required="required"
+                                placeholder="enter name..."
+                                onChange={() => handleEditChange()}
+                            />{" "}
+                            <Input
+                                type="email"
+                                name="email"
+                                value={editFormData.email}
+                                required="required"
+                                placeholder="enter email..."
+                                onChange={handleEditChange}
+                            />{" "}
+                            <Input
+                                type="text"
+                                name="date"
+                                value={editFormData.date}
+                                placeholder="enter date..."
+                                onChange={handleEditChange}
+                            />
+                            <button type="submit" className="btn btn-success">
+                                save
+                            </button>
+                        </form>
                     }
                 />
                 <table className={` table ${classes} ${className}`}>
