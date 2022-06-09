@@ -1,15 +1,15 @@
 import React from "react";
-import Card from "../../Components/Card/Card";
-import { Button } from "../../Components/Button/Button";
+import Card from "../../components/Card/Card";
+import { Button } from "../../components/Button/Button";
 import {
     Checkbox,
     RadioButton,
     Toggle,
     Select,
     Input,
-} from "../../Components/Input/Input";
-import { Table } from "../../Components/Table/test";
-import { Alert } from "../../Components/Alert/Alert";
+} from "../../components/Input/Input";
+import { Table } from "../../components/Table/test";
+import { Alert } from "../../components/Alert/Alert";
 
 import { BsInfoCircleFill, BsExclamationTriangleFill } from "react-icons/bs";
 import { AiFillCheckCircle } from "react-icons/ai";
@@ -84,7 +84,7 @@ const PageC = () => {
 
     return (
         <>
-            <div className="content-wrapper  ">
+            <div className="content-wrapper  " style={{ marginLeft: "100px" }}>
                 <div className="container"></div>
                 <div className="container">
                     <div className="row">
